@@ -198,21 +198,24 @@ navigation_target = st.session_state.pop(
     None
 )
 
-# Find the requested page
+# ------------------------------------------------------------
+# SIDEBAR NAVIGATION STATE
+# ------------------------------------------------------------
+
+if "selected_page" not in st.session_state:
+
+    st.session_state.selected_page = "🏠 Dashboard"
+
+# Dashboard Quick Action requested a page
 if navigation_target in pages:
 
-    default_page_index = pages.index(
-        navigation_target
-    )
+    st.session_state.selected_page = navigation_target
 
-else:
-
-    default_page_index = 0
-
+# Sidebar navigation
 page = st.sidebar.radio(
     "MENU",
     pages,
-    index=default_page_index
+    key="selected_page"
 )
 
 # ============================================================
