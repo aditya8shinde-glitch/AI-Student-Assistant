@@ -1,0 +1,1208 @@
+/* ============================================================
+   AI STUDENT ASSISTANT
+   REFERENCE DESIGN — LIGHT STUDENT / STUDY THEME
+   ============================================================ */
+
+
+/* ============================================================
+   GLOBAL
+   ============================================================ */
+
+:root {
+    --navy: #102A56;
+    --navy-soft: #31466A;
+    --muted: #66758C;
+
+    --page: #FAFBFD;
+    --white: #FFFFFF;
+
+    --border: #E5EAF2;
+    --border-soft: #EEF1F5;
+
+    --green: #4E8F76;
+    --green-soft: #EEF7F2;
+
+    --blue: #4D79B8;
+    --blue-soft: #EEF4FC;
+
+    --orange: #D99228;
+    --orange-soft: #FFF6E8;
+
+    --purple: #6254C7;
+    --purple-soft: #F2F0FF;
+
+    --shadow:
+        0 4px 14px rgba(16, 42, 86, 0.06);
+}
+
+
+/* ============================================================
+   PAGE
+   ============================================================ */
+
+.stApp {
+    background: var(--page);
+    color: var(--navy);
+}
+
+
+/* Main content */
+
+.block-container {
+    max-width: 1180px !important;
+
+    padding-top: 2.1rem !important;
+    padding-bottom: 2.5rem !important;
+
+    padding-left: 2.2rem !important;
+    padding-right: 2.2rem !important;
+}
+
+
+/* ============================================================
+   TOP STREAMLIT HEADER
+   ============================================================ */
+
+[data-testid="stHeader"] {
+    background: transparent !important;
+}
+
+[data-testid="stToolbar"] {
+    visibility: visible;
+}
+
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+
+[data-testid="stSidebar"] {
+    width: 300px !important;
+
+    background: #FFFFFF !important;
+
+    border-right: 1px solid var(--border) !important;
+}
+
+
+/* Sidebar inner area */
+
+[data-testid="stSidebar"] > div:first-child {
+    padding-top: 1.7rem;
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+}
+
+
+/* Sidebar text */
+
+[data-testid="stSidebar"] * {
+    color: var(--navy);
+}
+
+
+/* ============================================================
+   BRANDING
+   ============================================================ */
+
+.sidebar-brand {
+    padding: 0.2rem 0.4rem 0.5rem 0.4rem;
+}
+
+.sidebar-brand-title {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.72rem;
+    line-height: 1.12;
+
+    font-weight: 700;
+
+    letter-spacing: -0.4px;
+
+    color: var(--navy);
+}
+
+.sidebar-brand-title span {
+    color: var(--purple);
+}
+
+.sidebar-brand-subtitle {
+    margin-top: 0.65rem;
+
+    font-size: 0.92rem;
+
+    color: #66758C !important;
+
+    line-height: 1.45;
+}
+
+
+/* ============================================================
+   SIDEBAR DIVIDER
+   ============================================================ */
+
+[data-testid="stSidebar"] hr {
+    margin: 1.15rem 0 1.25rem 0;
+
+    border: none;
+    border-top: 1px solid var(--border);
+}
+
+
+/* ============================================================
+   SIDEBAR MENU
+   ============================================================ */
+
+.sidebar-menu-title {
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.4px;
+
+    color: #64748B !important;
+
+    margin-bottom: 0.45rem;
+
+    text-transform: uppercase;
+}
+
+
+/* Radio navigation */
+
+[data-testid="stSidebar"] [role="radiogroup"] {
+    gap: 3px !important;
+}
+
+
+/* Individual navigation item */
+
+[data-testid="stSidebar"] [role="radiogroup"] label {
+    min-height: 43px;
+
+    padding: 0.48rem 0.65rem !important;
+
+    border-radius: 10px !important;
+
+    margin: 0 !important;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease;
+}
+
+
+/* Hover */
+
+[data-testid="stSidebar"] [role="radiogroup"] label:hover {
+    background: #F5F6FB !important;
+}
+
+
+/* Radio circles */
+
+[data-testid="stSidebar"] [role="radiogroup"] label
+[data-testid="stMarkdownContainer"] {
+    font-size: 0.95rem;
+}
+
+
+/* ============================================================
+   SIDEBAR STATUS CARD
+   ============================================================ */
+
+.sidebar-status {
+    margin-top: 2.1rem;
+
+    padding: 1rem;
+
+    border: 1px solid var(--border);
+
+    border-radius: 13px;
+
+    background: #FFFFFF;
+
+    box-shadow: var(--shadow);
+}
+
+.sidebar-status-title {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    color: var(--navy);
+}
+
+.sidebar-status-ready {
+    margin-top: 0.35rem;
+
+    font-size: 0.8rem;
+
+    color: var(--green);
+}
+
+.sidebar-status-description {
+    margin-top: 0.65rem;
+
+    font-size: 0.76rem;
+
+    color: #64748B;
+}
+
+
+/* ============================================================
+   SIDEBAR FOOTER
+   ============================================================ */
+
+.sidebar-footer {
+    margin-top: 7rem;
+
+    padding: 1rem 0.3rem;
+
+    text-align: center;
+
+    font-size: 0.74rem;
+
+    color: #64748B !important;
+}
+
+
+/* ============================================================
+   MAIN HEADINGS
+   ============================================================ */
+
+h1,
+h2,
+h3 {
+    color: var(--navy) !important;
+}
+
+
+h1 {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif !important;
+
+    font-size: 2.45rem !important;
+
+    line-height: 1.08 !important;
+
+    font-weight: 750 !important;
+
+    letter-spacing: -1.2px !important;
+
+    margin-bottom: 0.45rem !important;
+}
+
+
+h2 {
+    font-family: Georgia, "Times New Roman", serif !important;
+
+    font-size: 1.48rem !important;
+
+    font-weight: 700 !important;
+
+    letter-spacing: -0.25px !important;
+}
+
+
+h3 {
+    font-size: 1.05rem !important;
+
+    font-weight: 650 !important;
+}
+
+
+/* ============================================================
+   DASHBOARD HERO
+   ============================================================ */
+
+.dashboard-eyebrow {
+    font-size: 0.76rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
+
+    color: #426D98;
+
+    margin-bottom: 0.8rem;
+}
+
+
+.dashboard-title {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 2.45rem;
+
+    line-height: 1.08;
+
+    font-weight: 750;
+
+    letter-spacing: -1.2px;
+
+    color: var(--navy);
+}
+
+
+.dashboard-subtitle {
+    margin-top: 0.55rem;
+
+    font-size: 0.98rem;
+
+    color: #52627A;
+
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   DASHBOARD SECTIONS
+   ============================================================ */
+
+.dashboard-section {
+    margin-top: 1.45rem;
+    margin-bottom: 1.45rem;
+}
+
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+
+.study-card {
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    box-shadow: var(--shadow);
+
+    padding: 1.15rem;
+
+    transition:
+        transform 0.16s ease,
+        box-shadow 0.16s ease;
+}
+
+
+.study-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 22px rgba(16, 42, 86, 0.08);
+}
+
+
+/* ============================================================
+   METRIC CARDS
+   ============================================================ */
+
+.metric-card {
+    height: 112px;
+
+    background: #FFFFFF;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    padding: 1rem 1.1rem;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.85rem;
+
+    box-shadow: var(--shadow);
+}
+
+
+.metric-icon {
+    width: 52px;
+    height: 52px;
+
+    min-width: 52px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 1.35rem;
+}
+
+
+.metric-icon.green {
+    background: var(--green-soft);
+}
+
+.metric-icon.blue {
+    background: var(--blue-soft);
+}
+
+.metric-icon.orange {
+    background: var(--orange-soft);
+}
+
+.metric-icon.purple {
+    background: var(--purple-soft);
+}
+
+
+.metric-label {
+    font-size: 0.8rem;
+
+    color: #52627A;
+
+    margin-bottom: 0.15rem;
+}
+
+
+.metric-value {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.75rem;
+
+    line-height: 1.05;
+
+    font-weight: 700;
+
+    color: var(--navy);
+}
+
+
+.metric-description {
+    margin-top: 0.2rem;
+
+    font-size: 0.72rem;
+
+    color: #718096;
+}
+
+
+/* ============================================================
+   SECTION HEADERS
+   ============================================================ */
+
+.section-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.55rem;
+
+    margin-bottom: 0.85rem;
+}
+
+
+.section-heading-title {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.42rem;
+
+    font-weight: 700;
+
+    color: var(--navy);
+}
+
+
+.section-heading-icon {
+    font-size: 1.35rem;
+}
+
+
+/* ============================================================
+   PERFORMANCE CARD
+   ============================================================ */
+
+.performance-card {
+    background: #FFFFFF;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    padding: 1.2rem;
+
+    box-shadow: var(--shadow);
+}
+
+
+.performance-label {
+    font-size: 0.78rem;
+
+    color: #52627A;
+
+    margin-top: 0.9rem;
+}
+
+
+.performance-value {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.95rem;
+
+    font-weight: 700;
+
+    color: var(--navy);
+
+    margin-top: 0.12rem;
+}
+
+
+/* ============================================================
+   ACCURACY CARD
+   ============================================================ */
+
+.accuracy-card {
+    background: #FFFFFF;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    padding: 1.2rem;
+
+    box-shadow: var(--shadow);
+}
+
+
+.accuracy-inner {
+    margin-top: 0.75rem;
+
+    padding: 1rem;
+
+    border-radius: 11px;
+
+    border: 1px solid #DDECE4;
+
+    background: #F4FAF7;
+}
+
+
+.accuracy-label {
+    font-size: 0.78rem;
+
+    color: #52627A;
+}
+
+
+.accuracy-value {
+    margin-top: 0.18rem;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.95rem;
+
+    font-weight: 700;
+
+    color: var(--navy);
+}
+
+
+/* ============================================================
+   PROGRESS BAR
+   ============================================================ */
+
+[data-testid="stProgressBar"] {
+    margin-top: 0.45rem;
+
+    height: 9px;
+}
+
+
+[data-testid="stProgressBar"] > div {
+    border-radius: 20px;
+}
+
+
+/* ============================================================
+   SUCCESS / PERFORMANCE MESSAGE
+   ============================================================ */
+
+.performance-message {
+    margin-top: 0.75rem;
+
+    padding: 0.62rem 0.75rem;
+
+    border: 1px solid #DDECE4;
+
+    border-radius: 9px;
+
+    background: #F2F8F5;
+
+    color: #27664F;
+
+    font-size: 0.8rem;
+}
+
+
+/* ============================================================
+   RECENT QUIZ ACTIVITY
+   ============================================================ */
+
+.quiz-activity-card {
+    background: #FFFFFF;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    padding: 1.15rem;
+
+    box-shadow: var(--shadow);
+}
+
+
+.quiz-row {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0.65rem 0;
+
+    border-bottom: 1px solid var(--border-soft);
+}
+
+
+.quiz-row:last-child {
+    border-bottom: none;
+}
+
+
+.quiz-name {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.93rem;
+
+    font-weight: 700;
+
+    color: var(--navy);
+}
+
+
+.quiz-meta {
+    margin-top: 0.2rem;
+
+    font-size: 0.72rem;
+
+    color: #718096;
+}
+
+
+.quiz-score {
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    padding: 0.3rem 0.55rem;
+
+    border-radius: 20px;
+
+    background: var(--green-soft);
+
+    color: #27664F;
+}
+
+
+/* ============================================================
+   QUICK ACTIONS
+   ============================================================ */
+
+.quick-actions-card {
+    background: #FFFFFF;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    padding: 1.15rem;
+
+    box-shadow: var(--shadow);
+}
+
+
+.quick-action {
+    min-height: 82px;
+
+    border-radius: 11px;
+
+    border: 1px solid var(--border);
+
+    padding: 0.85rem;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.75rem;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+
+.quick-action:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 14px rgba(16, 42, 86, 0.07);
+}
+
+
+.quick-action.green {
+    background: #F5FAF7;
+    border-color: #DDECE4;
+}
+
+
+.quick-action.blue {
+    background: #F4F8FD;
+    border-color: #DCE7F5;
+}
+
+
+.quick-action.orange {
+    background: #FFF9F0;
+    border-color: #F3E4C8;
+}
+
+
+.quick-action.purple {
+    background: #F7F5FF;
+    border-color: #E4DFFF;
+}
+
+
+.quick-action-icon {
+    font-size: 1.65rem;
+
+    width: 42px;
+
+    text-align: center;
+}
+
+
+.quick-action-title {
+    font-size: 0.83rem;
+
+    font-weight: 700;
+
+    color: var(--navy);
+}
+
+
+.quick-action-description {
+    margin-top: 0.18rem;
+
+    font-size: 0.71rem;
+
+    line-height: 1.4;
+
+    color: #64748B;
+}
+
+
+/* ============================================================
+   LEARNING BANNER
+   ============================================================ */
+
+.learning-banner {
+    margin-top: 1.1rem;
+
+    background: #FCFAF5;
+
+    border: 1px solid #EEE7D9;
+
+    border-radius: 14px;
+
+    padding: 1.15rem 1.3rem;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+}
+
+
+.learning-banner-icon {
+    width: 52px;
+    height: 52px;
+
+    min-width: 52px;
+
+    border-radius: 50%;
+
+    background: #F4ECDD;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 1.45rem;
+}
+
+
+.learning-banner-title {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.05rem;
+
+    font-weight: 700;
+
+    color: var(--navy);
+}
+
+
+.learning-banner-text {
+    margin-top: 0.25rem;
+
+    font-size: 0.78rem;
+
+    line-height: 1.45;
+
+    color: #5F6F83;
+}
+
+
+/* ============================================================
+   NATIVE STREAMLIT METRICS
+   ============================================================ */
+
+[data-testid="stMetric"] {
+    background: #FFFFFF;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    padding: 1rem;
+
+    box-shadow: var(--shadow);
+}
+
+
+[data-testid="stMetricLabel"] {
+    color: #52627A !important;
+
+    font-size: 0.8rem !important;
+}
+
+
+[data-testid="stMetricValue"] {
+    color: var(--navy) !important;
+
+    font-size: 1.75rem !important;
+
+    font-weight: 700 !important;
+}
+
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.stButton > button {
+    min-height: 40px;
+
+    border-radius: 9px;
+
+    border: 1px solid #D9E0EA;
+
+    background: #FFFFFF;
+
+    color: var(--navy);
+
+    font-weight: 600;
+
+    box-shadow: none;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.15s ease;
+}
+
+
+.stButton > button:hover {
+    background: #F7F8FB;
+
+    border-color: #BBC7D8;
+
+    color: var(--navy);
+
+    transform: translateY(-1px);
+
+    box-shadow: none;
+}
+
+
+/* ============================================================
+   INPUTS
+   ============================================================ */
+
+.stTextInput input,
+.stTextArea textarea {
+    border-radius: 9px !important;
+
+    border: 1px solid #D9E0EA !important;
+
+    background: #FFFFFF !important;
+
+    color: var(--navy) !important;
+}
+
+
+.stTextInput input:focus,
+.stTextArea textarea:focus {
+    border-color: #AAB8CC !important;
+
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.05) !important;
+}
+
+
+/* ============================================================
+   SELECTBOX
+   ============================================================ */
+
+[data-baseweb="select"] > div {
+    border-radius: 9px !important;
+
+    border-color: #D9E0EA !important;
+
+    background: #FFFFFF !important;
+}
+
+
+/* ============================================================
+   FILE UPLOADER
+   ============================================================ */
+
+[data-testid="stFileUploader"] {
+    border-radius: 12px;
+}
+
+
+/* ============================================================
+   CHAT
+   ============================================================ */
+
+[data-testid="stChatMessage"] {
+    border-radius: 11px;
+
+    border: 1px solid var(--border-soft);
+}
+
+
+/* ============================================================
+   EXPANDERS
+   ============================================================ */
+
+[data-testid="stExpander"] {
+    border-radius: 11px;
+
+    border-color: var(--border);
+}
+
+
+/* ============================================================
+   DIVIDERS
+   ============================================================ */
+
+hr {
+    border: none !important;
+
+    border-top: 1px solid var(--border) !important;
+
+    margin-top: 1.3rem !important;
+
+    margin-bottom: 1.3rem !important;
+}
+
+
+/* ============================================================
+   HIDE UNNECESSARY STREAMLIT DECORATION
+   ============================================================ */
+
+#MainMenu {
+    visibility: hidden;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1000px) {
+
+    [data-testid="stSidebar"] {
+        width: 260px !important;
+    }
+
+    .block-container {
+        padding-left: 1.2rem !important;
+        padding-right: 1.2rem !important;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .block-container {
+        padding-top: 1.5rem !important;
+    }
+
+    h1,
+    .dashboard-title {
+        font-size: 2rem !important;
+    }
+
+}
+/* ============================================================
+   SIDEBAR — AI STUDENT ASSISTANT
+   ============================================================ */
+
+/* Sidebar background */
+section[data-testid="stSidebar"] {
+    background: #F8FAFC !important;
+    border-right: 1px solid #E2E8F0;
+}
+
+/* Sidebar inner spacing */
+section[data-testid="stSidebar"] > div {
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Sidebar title */
+section[data-testid="stSidebar"] h1 {
+    color: #17233B !important;
+    font-size: 1.25rem !important;
+    font-weight: 750 !important;
+    letter-spacing: -0.4px;
+    line-height: 1.25;
+}
+
+/* Sidebar description */
+section[data-testid="stSidebar"] p {
+    color: #64748B;
+    font-size: 0.78rem;
+}
+
+/* Sidebar divider */
+section[data-testid="stSidebar"] hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-color: #E2E8F0;
+}
+
+/* MENU label */
+section[data-testid="stSidebar"] label {
+    color: #718096 !important;
+    font-size: 0.68rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Navigation container */
+section[data-testid="stSidebar"] div[role="radiogroup"] {
+    gap: 5px;
+}
+
+/* Navigation item */
+section[data-testid="stSidebar"] div[role="radiogroup"] label {
+    min-height: 42px;
+
+    padding: 9px 12px;
+
+    border-radius: 11px;
+
+    color: #475569 !important;
+
+    font-size: 0.82rem !important;
+
+    font-weight: 600 !important;
+
+    letter-spacing: 0;
+
+    text-transform: none;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        transform 0.15s ease;
+}
+
+/* Navigation hover */
+section[data-testid="stSidebar"] div[role="radiogroup"] label:hover {
+    background: #EEF2F7 !important;
+    color: #17233B !important;
+}
+
+/* Active navigation item */
+section[data-testid="stSidebar"] div[role="radiogroup"] label:has(
+    input:checked
+) {
+    background: #E8F1FF !important;
+    color: #17233B !important;
+    font-weight: 700 !important;
+}
+
+/* Hide radio circles */
+section[data-testid="stSidebar"] div[role="radiogroup"] label > div:first-child {
+    display: none;
+}
+
+/* Sidebar footer */
+.sidebar-footer {
+    margin-top: 2rem;
+
+    padding: 14px 15px;
+
+    border: 1px solid #E2E8F0;
+
+    border-radius: 13px;
+
+    background: #FFFFFF;
+
+    color: #64748B;
+
+    font-size: 0.72rem;
+
+    line-height: 1.5;
+
+    box-shadow:
+        0 2px 10px
+        rgba(15, 23, 42, 0.025);
+}
+
+/* Local AI title */
+.sidebar-footer strong {
+    color: #17233B;
+    font-weight: 700;
+}

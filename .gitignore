@@ -1,0 +1,13 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+.streamlit/secrets.toml
+*.db
+
+# Local backup files
+app_backup.py
+modules/notes_backup.py
+modules/notes_rag_backup.py

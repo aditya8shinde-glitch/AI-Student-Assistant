@@ -1,0 +1,34 @@
+[theme]
+
+# Overall appearance
+base = "light"
+
+# Primary student/AI accent
+primaryColor = "#4F46E5"
+
+# Main workspace background
+backgroundColor = "#FAFBFD"
+
+# Cards, sidebar and input backgrounds
+secondaryBackgroundColor = "#FFFFFF"
+
+# Main text
+textColor = "#102A56"
+
+# Clean modern typography
+font = "sans serif"
+
+# Rounded UI elements
+baseRadius = "0.75rem"
+
+# Border radius for buttons
+buttonRadius = "0.65rem"
+
+# Slightly softer than pure white
+borderColor = "#E5EAF2"
+
+# Input styling
+showWidgetBorder = true
+
+# Sidebar border
+showSidebarBorder = true
